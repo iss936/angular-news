@@ -2,4 +2,9 @@
   {{title}}
 </h1>
 
-
+<div class="container">
+    <!-- {{ sources | json }} -->
+    <div *ngFor="let source of sources" class="search-result" >
+      {{source.name}}
+    </div>
+</div>

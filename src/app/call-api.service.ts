@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
+import { Source }           from './source';
 
 @Injectable()
 export class CallApiService {
@@ -11,7 +12,7 @@ export class CallApiService {
 
     return this.http.get(this.newsUrl)
                .toPromise()
-               .then(response => response.json().data)
+               .then(response => response.json() as Source[])
                .catch(this.handleError);
    }
 
