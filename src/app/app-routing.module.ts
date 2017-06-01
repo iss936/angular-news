@@ -7,8 +7,8 @@ import { NewsWithoutSourceComponent } from './news-without-source/news-without-s
 import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: HomeComponent },
+  // liste des articles
   { path: 'news-content', component: NewsWithoutSourceComponent, 
 
     children: [
@@ -22,7 +22,6 @@ const routes: Routes = [
       }
     ]
   },
-  
   { path: '**', redirectTo: '' }
 ];
 

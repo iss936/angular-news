@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
-import { Source }           from './source';
-import { News }           from './news';
+import { Source } from './source';
+import { News } from './news';
 
 @Injectable()
 // Permet de faire les appels api nécessaire au bon fonctionnement de l'application
