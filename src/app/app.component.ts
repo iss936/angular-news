@@ -12,8 +12,7 @@ export class AppComponent implements OnInit {
     
     title = 'Infos news';
     constructor(private callApi: CallApiService, public auth: AuthService) {
-    auth.handleAuthentication();
-    
+        auth.handleAuthentication();
     }
     sources;
 

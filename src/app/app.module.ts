@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { CallbackComponent } from './callback/callback.component';
+import { LoginComponent } from './login/login.component';
+import {AuthGuard} from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { CallbackComponent } from './callback/callback.component';
     NewsNotFoundSourceComponent,
     HomeComponent,
     ProfileComponent,
-    CallbackComponent
+    CallbackComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { CallbackComponent } from './callback/callback.component';
     JsonpModule,
     AppRoutingModule
   ],
-  providers: [CallApiService],
+  providers: [CallApiService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

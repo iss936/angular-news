@@ -20,7 +20,7 @@
           <button
             class="btn btn-primary btn-margin"
             *ngIf="!auth.isAuthenticated()"
-            (click)="auth.login()">
+            routerLink="/login">
               Log In
           </button>
 
@@ -36,7 +36,7 @@
     </nav>
     <div class="row">
         <div class="col-md-3">
-            <h2>
+            <h2 *ngIf="auth.isAuthenticated()">
                 Mes collections
             </h2>
         </div>
