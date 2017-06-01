@@ -5,16 +5,24 @@ import { HttpModule,JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CallApiService }  from './call-api.service';
+import { NewsComponent } from './news/news.component';
+import { AppRoutingModule }     from './app-routing.module';
+import { NewsWithoutSourceComponent } from './news-without-source/news-without-source.component';
+import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewsComponent,
+    NewsWithoutSourceComponent,
+    NewsNotFoundSourceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    AppRoutingModule
   ],
   providers: [CallApiService],
   bootstrap: [AppComponent]
