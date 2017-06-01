@@ -11,13 +11,19 @@ import { NewsWithoutSourceComponent } from './news-without-source/news-without-s
 import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
 import { HomeComponent } from './home/home.component';
 
+import { AuthService } from './auth/auth.service';
+import { ProfileComponent } from './profile/profile.component';
+import { CallbackComponent } from './callback/callback.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     NewsWithoutSourceComponent,
     NewsNotFoundSourceComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
