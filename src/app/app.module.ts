@@ -11,13 +11,22 @@ import { NewsWithoutSourceComponent } from './news-without-source/news-without-s
 import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
 import { HomeComponent } from './home/home.component';
 
+import { AuthService } from './auth/auth.service';
+import { ProfileComponent } from './profile/profile.component';
+import { CallbackComponent } from './callback/callback.component';
+import { LoginComponent } from './login/login.component';
+import {AuthGuard} from './auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     NewsWithoutSourceComponent,
     NewsNotFoundSourceComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent,
+    CallbackComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,7 @@ import { HomeComponent } from './home/home.component';
     JsonpModule,
     AppRoutingModule
   ],
-  providers: [CallApiService],
+  providers: [CallApiService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
