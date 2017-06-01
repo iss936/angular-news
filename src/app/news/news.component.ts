@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
-import { News }         from '../news';
 import { CallApiService }  from '../call-api.service';
 
 @Component({
@@ -21,10 +20,9 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.callApiService.getNews(params['id']).then(data => {
-        
+            this.news = data.articles;
       }))
-      .subscribe(news => this.news = news);
-
+      .subscribe(news => this.news);
   }
 
   goBack(): void {
