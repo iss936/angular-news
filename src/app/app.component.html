@@ -1,30 +1,14 @@
-<div class="container">
 
-<h1 align="center">
-  {{title}}
-</h1>
-<br>
-
-<div class="col-md-3">
-<h2>
-    Mes collections
-</h2>
-</div>
-
-<div class="col-md-9">
-    <div>
-            <!-- {{ sources | json }} -->
-        <div *ngFor="let source of sources" class="well" >
-          <strong>{{source.name}}</strong>
-          <br>
-          {{source.description}}
-
-          <div align="right">
-              <a  routerLink="/news-content/{{ source.id }}" class="btn btn-info"> Consulter</a> | <a href="#" class="btn btn-success">Suivre</a>
-          </div>
-        </div>
+<main class="container">
+    <div class="col-md-3">
+        <h2>
+            Mes collections
+        </h2>
     </div>
 
-</div>
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
 
-<router-outlet></router-outlet>
+</main>
+
