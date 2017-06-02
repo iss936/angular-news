@@ -6,11 +6,13 @@ import { LoginComponent } from './login/login.component';
 import { NewsComponent } from './news/news.component';
 import { NewsWithoutSourceComponent } from './news-without-source/news-without-source.component';
 import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
-
 import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthGuard } from './auth.guard';
+import { CollectionPanelComponent } from './collection-panel/collection-panel.component'; 
+import { CollectionNotFoundComponent } from './collection-not-found/collection-not-found.component'; 
+import { CollectionComponent } from './collection/collection.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -33,6 +35,19 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent }, // la page de login
   { path: 'callback', component: CallbackComponent },
+  { path: 'collection-content', component: CollectionPanelComponent,
+
+        children: [
+        {
+            path: '',
+            component: CollectionNotFoundComponent
+        },
+        {
+            path: ':id',
+            component: CollectionComponent
+        }
+    ]
+ },
   { path: '**', redirectTo: '' }
 ];
 

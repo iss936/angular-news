@@ -3,17 +3,17 @@
     <h1 align="center">
       {{title}}
     </h1>
+  
+<div>
+        <!-- {{ sources | json }} -->
+    <div *ngFor="let source of sources" class="well" >
+      <strong>{{source.name}}</strong>
+      <br>
+      {{source.description}}
 
-    <div>
-            <!-- {{ sources | json }} -->
-        <div *ngFor="let source of sources" class="well" >
-          <strong>{{source.name}}</strong>
-          <br>
-          {{source.description}}
-
-          <div align="right">
-              <a  routerLink="/news-content/{{ source.id }}" class="btn btn-info"> Consulter</a> | <a href="#" class="btn btn-success">Suivre</a>
-          </div>
-        </div>
+      <div align="right">
+          <a  routerLink="/news-content/{{ source.id }}" class="btn btn-info"> Consulter</a> |
+          <a  routerLink="/collection-content/{{source.id}}" class="btn btn-info"> Suivre</a>
+      </div>
     </div>
 </div>

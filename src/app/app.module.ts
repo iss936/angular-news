@@ -10,6 +10,12 @@ import { AppRoutingModule }     from './app-routing.module';
 import { NewsWithoutSourceComponent } from './news-without-source/news-without-source.component';
 import { NewsNotFoundSourceComponent } from './news-not-found-source/news-not-found-source.component';
 import { HomeComponent } from './home/home.component';
+import { CollectionComponent } from './collection/collection.component';
+import { CollectionPanelComponent } from './collection-panel/collection-panel.component';
+import { CollectionNotFoundComponent } from './collection-not-found/collection-not-found.component';
+import { CollectionService } from './collection/collection.service';
+import { CollectionFormComponent } from './collection-form/collection-form.component';
+
 
 import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
@@ -27,6 +33,10 @@ import {AuthGuard} from './auth.guard';
     ProfileComponent,
     CallbackComponent,
     LoginComponent
+    CollectionComponent,
+    CollectionPanelComponent,
+    CollectionNotFoundComponent,
+    CollectionFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +45,7 @@ import {AuthGuard} from './auth.guard';
     JsonpModule,
     AppRoutingModule
   ],
-  providers: [CallApiService, AuthGuard],
+  providers: [CallApiService, AuthGuard, CollectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
