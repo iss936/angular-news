@@ -23,7 +23,7 @@
                 Mes collections
             </h2>
 
-            <div class="">
+            <div *ngIf="auth.isAuthenticated()" class="">
                 <ul>
                     <li *ngFor="let collection of myCollections"
                     [class.selected]="collection === selectedCollection"
