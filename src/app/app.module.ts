@@ -23,6 +23,7 @@ import { CallbackComponent } from './callback/callback.component';
 import { LoginComponent } from './login/login.component';
 import {AuthGuard} from './auth.guard';
 import { ConfirmComponent } from './confirm/confirm.component';
+import { CollectionManagerComponent } from './collection-manager/collection-manager.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ConfirmComponent } from './confirm/confirm.component';
     CollectionNotFoundComponent,
     CollectionFormComponent,
     LoginComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    CollectionManagerComponent
   ],
   entryComponents: [
     ConfirmComponent

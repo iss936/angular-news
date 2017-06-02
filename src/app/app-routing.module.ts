@@ -10,14 +10,14 @@ import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthGuard } from './auth.guard';
-import { CollectionPanelComponent } from './collection-panel/collection-panel.component'; 
-import { CollectionNotFoundComponent } from './collection-not-found/collection-not-found.component'; 
+import { CollectionPanelComponent } from './collection-panel/collection-panel.component';
+import { CollectionNotFoundComponent } from './collection-not-found/collection-not-found.component';
 import { CollectionComponent } from './collection/collection.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'news-content', component: NewsWithoutSourceComponent, 
+  { path: 'news-content', component: NewsWithoutSourceComponent,
     canActivate: [AuthGuard],
     children: [
       {

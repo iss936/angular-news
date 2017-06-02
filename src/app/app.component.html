@@ -39,6 +39,22 @@
             <h2 *ngIf="auth.isAuthenticated()">
                 Mes collections
             </h2>
+            <div class="">
+                <ul>
+                    <li *ngFor="let collection of myCollections"
+                    [class.selected]="collection === selectedCollection"
+                    (click)="onSelect(collection)">
+                        <span>{{collection.name}}</span>
+                        <ul>
+                            <li *ngFor="let fav of collection.fav">
+                                <a routerLink="/news-content/{{ fav }}"> {{fav}}</a>
+                                | <a href="#"><i class="fa fa-times" aria-hidden="true"></i>Supprimer</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <app-collection-manager [collection]="selectedCollection"></app-collection-manager>
+            </div>
         </div>
 
         <div class="col-md-6">

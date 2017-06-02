@@ -16,8 +16,9 @@ export class CollectionService {
       COLLECTIONS.push(collection);
   }
 
-  removeItem(collection){
-
+  removeItem(name, chanel){
+      let index = COLLECTIONS.map(function(e) { return e.name; }).indexOf(name);
+      // TODO: remove the item from the list
   }
 
   modifyItem(name, chanel){

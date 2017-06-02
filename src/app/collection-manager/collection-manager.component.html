@@ -1,0 +1,8 @@
+<div *ngIf="collection">
+    <h4>{{collection.name}} collection</h4>
+    <p>Modifier: </p>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="collection.name" placeholder="name"/>
+    </div>
+</div>
