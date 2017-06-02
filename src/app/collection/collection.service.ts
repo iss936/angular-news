@@ -17,8 +17,8 @@ export class CollectionService {
   }
 
   removeItem(name, chanel){
-      let index = COLLECTIONS.map(function(e) { return e.name; }).indexOf(name);
-      // TODO: remove the item from the list
+      console.log("in removefunction");
+
   }
 
   modifyItem(name, chanel){

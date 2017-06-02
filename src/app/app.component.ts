@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.getCollections();
         this.callApi.getSourcesNews().then(data => {
-            // console.log('data', data.sources);
             this.sources = data.sources;
         });
     }
@@ -34,5 +33,13 @@ export class AppComponent implements OnInit {
 
     onSelect(collection: Collection): void {
         this.selectedCollection = collection;
+    }
+
+    removeItem(event){
+        // console.log(event);
+        //
+        // var target = event.target || event.srcElement || event.currentTarget;
+        // var sourceId = target.id;
+        // this.collectionService.removeItem(this.selectedCollection.name, sourceId);
     }
 }
