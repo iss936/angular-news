@@ -1,28 +1,34 @@
 <div class="container">
+     <div class="col-md-10">
 
-<h1 align="center">
-  Liste des articles
-</h1>
+        <h1 align="center">
+          Liste des articles
+        </h1>
 
-<div>
-    <div *ngFor="let oneNews of news" class="well" >
-        <div class="row">
+        <div>
+            <div *ngFor="let oneNews of news" class="well" >
+                <div class="row">
 
-            <div class="col-md-3">
-                <img src="{{ oneNews.urlToImage }}" height="200" width="200">
+                    <div class="col-md-3">
+                        <img src="{{ oneNews.urlToImage }}" height="200" width="200">
+                    </div>
+
+                    <div class="col-md-9">
+                        <h3>{{ oneNews.title }}</h3>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i>Publié le : {{ oneNews.publishedAt | date: 'dd/MM/yyyy'}}</p>
+                        <br><br>
+                        <p> {{ oneNews.description }}</p>
+
+                        <p><a target="_blank" href="{{ oneNews.url }}">En savoir plus</a></p>
+
+                        <div align="right">
+                            <p><a href="" class="btn btn-success">Ajouter aux favoris</a></p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-9">
-                <strong>{{ oneNews.title }}</strong>
-                <p><i class="fa fa-clock-o" aria-hidden="true"></i>Publié le : {{ oneNews.publishedAt | date: 'dd/MM/yyyy'}}</p>
-                <br><br>
-                <p> {{ oneNews.description }}</p>
-
-                <p><a target="_blank" href="{{ oneNews.url }}">En savoir plus</a></p>
-            </div>
-        </div>
     </div>
-   
 </div>
 
 

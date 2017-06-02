@@ -3,16 +3,30 @@
     <h3>Profil</h3>
   </div>
   <div class="panel-body">
-    <img src="{{profile?.picture}}" class="avatar" alt="avatar">
-    <div>
-      <label><i class="glyphicon glyphicon-user"></i> Pseudo</label>
-      <h3 class="nickname">{{ profile?.nickname }}</h3>
-    </div>
-    <div>
-      <label><i class="glyphicon glyphicon-user"></i> Nom :  </label>
-      <h3 class="nickname">{{ profile?.name }}</h3>
-    </div>
-    
-    <!-- <pre class="full-profile">{{ profile | json }}</pre> -->
+
+      <img src="{{profile?.picture}}" class="avatar" alt="avatar">
+
+      <div class="col-md-8"> 
+
+        <div>
+          <label><i class="glyphicon glyphicon-user"></i> Pseudo</label>
+          <h3 class="nickname">{{ profile?.nickname }}</h3>
+        </div>
+        <div>
+          <label><i class="glyphicon glyphicon-user"></i> Nom :  </label>
+          <h3 class="nickname">{{ profile?.family_name }}</h3>
+        </div>
+         <div>
+          <label><i class="glyphicon glyphicon-user"></i> Prénom :  </label>
+          <h3 class="nickname">{{ profile?.given_name }}</h3>
+        </div>
+         <div>
+          <label><i class="glyphicon glyphicon-flash"></i> Sexe :  </label>
+          <h3 class="nickname">{{ profile?.gender }}</h3>
+        </div>
+
+      </div>
+  
+
   </div>
 </div>
