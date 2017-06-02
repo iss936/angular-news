@@ -35,16 +35,19 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent }, // la page de login
   { path: 'callback', component: CallbackComponent },
-  { path: 'collection-content', component: CollectionPanelComponent,
+  { path: 'collection-content', component: CollectionPanelComponent
+  , canActivate: [AuthGuard],
 
         children: [
         {
             path: '',
-            component: CollectionNotFoundComponent
+            component: CollectionNotFoundComponent,
+            canActivate: [AuthGuard]
         },
         {
             path: ':id',
-            component: CollectionComponent
+            component: CollectionComponent,
+            canActivate: [AuthGuard]
         }
     ]
  },
