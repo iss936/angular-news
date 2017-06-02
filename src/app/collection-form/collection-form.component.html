@@ -1,0 +1,12 @@
+<div class="container">
+    <h4>Add to Collection</h4>
+    <form collectionForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+            [(ngModel)]="name" name="name"
+           required>
+      </div>
+      <button type="button" class="btn btn-default" (click)="newCollection()">New </button>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <h3>Mesfavoris</h3>
+    <form>
+        <select [(ngModel)]="collectionName" name="selected" >
+            <option *ngFor="let collection of collections" [ngValue]="collection.name">
+                {{collection.name}}
+            </option>
+        </select>
+        {{collectionName}}
+        <button type="button" class="btn btn-default" (click)="addToCollection()">Ajouter </button>
+    </form>
+</div>
+<br>
+<div>
+    <h3>Ajouter une collection de favoris</h3>
+    <app-collection-form></app-collection-form>
+</div>
